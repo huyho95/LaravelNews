@@ -22,7 +22,7 @@ class TheLoaiController extends Controller
     {
         $this->validate($request,
             [
-                'txtCateName' => 'required|unique:TheLoai,Ten|min:3|max:100'
+                'txtCateName' => 'required|unique:theloai,Ten|min:3|max:100'
             ],
             [
                 'txtCateName.unique' => 'Category name have already existed',
@@ -50,7 +50,7 @@ class TheLoaiController extends Controller
         $theloai = TheLoai::find($id);       
         $this->validate($request,
             [
-                'txtCateName' => 'required|unique:TheLoai,Ten|min:3|max:100'
+                'txtCateName' => 'required|unique:theloai,Ten|min:3|max:100'
             ],
             [
                 'txtCateName.unique' => 'Category name have already existed',
