@@ -15,7 +15,7 @@ use App\TheLoai;
 //     return view('welcome');
 // });
 
-Route::get('/','PagesController@getVideo');
+Route::get('/home','PagesController@getVideo');
 
 Route::get('admin/dangnhap','UserController@getDangnhapAdmin');
 Route::post('admin/dangnhap','UserController@postDangnhapAdmin');
@@ -101,7 +101,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 });
 
-Route::get('home','PagesController@home');
+Route::get('','PagesController@home');
 Route::get('contact','PagesController@contact');
 Route::get('typeOfnews/{id}/{TenKhongDau}.html','PagesController@typeOfnews');
 Route::get('news/{id}/{TieuDeKhongDau}.html','PagesController@news');
